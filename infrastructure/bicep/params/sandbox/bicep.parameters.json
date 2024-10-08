@@ -18,7 +18,7 @@
         "value": "eastus2"
     },
     "environment": {
-        "value": "sandbox"
+        "value": "sandbox2"
     },
 
     "containerNames": {
@@ -41,7 +41,7 @@
       "value": "databricks-sandbox-rg2"
     },
     "workspaceName" : {
-      "value": "dbxwssandbox"
+      "value": "dbxwssandbox2"
     },
     "pricingTier": {
       "value": "premium"
@@ -50,19 +50,19 @@
       "value": true
     },
     "loganalyticswsname": {
-      "value": "loganalyticssandbox"
+      "value": "loganalyticssandbox2"
     },
     "appInsightswsname": {
-      "value": "appinsightssandbox"
+      "value": "appinsightssandbox2"
     },
     "storageAccountName": {
-      "value": "adlssandbox"
+      "value": "adlssandbox2"
     },
     "amlwsname": {
-      "value": "amlsandbox"
+      "value": "amlsandbox2"
     },
     "amlblobname": {
-      "value": "amlblobsandbox"
+      "value": "amlblobsandbox2"
     }
   }
 }

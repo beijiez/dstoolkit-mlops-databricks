@@ -128,7 +128,7 @@ if __name__ == "__main__":
     DBRKS_REQ_HEADERS = {
     'Authorization': f'Bearer {DBRKS_BEARER_TOKEN}',
     'X-Databricks-Azure-SP-Management-Token': f'{DBRKS_MANAGEMENT_TOKEN}',
-    'X-Databricks-Azure-Workspace-Resource-Id': '/subscriptions/<>/resourceGroups/databricks-sandbox-rg2/providers/Microsoft.Databricks/workspaces/dbxwssandbox-eco3',
+    'X-Databricks-Azure-Workspace-Resource-Id': '/subscriptions/<>/resourceGroups/databricks-sandbox-rg2/providers/Microsoft.Databricks/workspaces/dbxwssandbox2-eco3',
     'Content-Type': 'application/json'
 }
     DATABRICKS_INSTANCE = "adb-204110209##.#.azuredatabricks.net"
