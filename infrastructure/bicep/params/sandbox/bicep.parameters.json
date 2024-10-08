@@ -38,7 +38,7 @@
       }
     },
     "resourceGroupName" :{
-      "value": "databricks-sandbox-rg"
+      "value": "databricks-sandbox-rg2"
     },
     "workspaceName" : {
       "value": "dbxwssandbox"
