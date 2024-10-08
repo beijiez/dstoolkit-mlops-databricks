@@ -16,7 +16,7 @@ test_json = {"parameters": {
                 "value": "mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json"
             },
             "location": {
-                "value": "eastus"
+                "value": "eastus2"
             }
         }
     }
@@ -35,7 +35,7 @@ class TestLoadJson:
                     "value": "mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json"
                 },
                 "location": {
-                    "value": "eastus"
+                    "value": "eastus2"
                 }
             }
         }
@@ -62,7 +62,7 @@ class TestLoadJson:
     def test_get_location(self, mock_load_json):
         load_json = LoadJson()
         result = load_json.get_location()
-        expected_result = "eastus"
+        expected_result = "eastus2"
         assert result == expected_result
 
 
@@ -83,14 +83,14 @@ class TestDeployAzureResources:
     @patch("python.utils_create_azure_resources.run_cmd")
     @patch.object(LoadJson, "get_param_file_path", return_value="mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json")
     @patch.object(LoadJson, "get_template_file_path", return_value="mlOps/devOps/infra/master_templates/main.bicep")
-    @patch.object(LoadJson, "get_location", return_value="eastus")
+    @patch.object(LoadJson, "get_location", return_value="eastus2")
     def test_deploy_azure_resources_success(self, mock_location, mock_template_file_path, mock_param_file_path, mock_run_cmd):
         mock_run_cmd.return_value = ('', 0)
         deploy_azure_resources()
         mock_run_cmd.assert_called_with(
             [
                 "az", "deployment", "sub", "create",
-                "--location", "eastus",
+                "--location", "eastus2",
                 "--template-file", "path/to/template/file",
                 "--parameters", "path/to/param/file",
                 "--name", "test_environment",
@@ -134,7 +134,7 @@ def test_load_json():
                                         "value": "mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json"
                                     },
                                     "location": {
-                                        "value": "eastus"
+                                        "value": "eastus2"
                                     }
                                 }
                             }''')
@@ -153,7 +153,7 @@ def test_load_json():
                     'value': 'mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json'
                 },
                 'location': {
-                    'value': 'eastus'
+                    'value': 'eastus2'
                 }
             }
         }
@@ -165,7 +165,7 @@ def test_load_json():
         assert load_json_obj.get_param_file_path() == 'mlOps/devOps/infra/master_templates/params/development/bicep.parameters.json'
 
         # Call the get_location method and assert that it returns the expected value
-        assert load_json_obj.get_location() == 'eastus'
+        assert load_json_obj.get_location() == 'eastus2'
 
 
 class TestRunCmd(unittest.TestCase):

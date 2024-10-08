@@ -15,7 +15,7 @@
         "value": "https://management.core.windows.net/"
       },
       "location": {
-          "value": "eastus"
+          "value": "eastus2"
       },
       "environment": {
           "value": "prod"
