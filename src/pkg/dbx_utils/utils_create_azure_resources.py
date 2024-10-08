@@ -5,7 +5,7 @@ import json
 __here__ = os.path.dirname(__file__)
 
 ENVIRONMENT = os.environ['ENVIRONMENT']
-
+ENVIRONMENT2 = ENVIRONMENT + "2"
 
 class LoadJson():
     def __init__(self):
@@ -49,7 +49,7 @@ def deploy_azure_resources():
                     "--location", location,
                     "--template-file", template_file_path,
                     "--parameters", template_param_file_path,
-                    "--name", ENVIRONMENT,
+                    "--name", ENVIRONMENT2,
                     "--only-show-errors"  ]
     
 
